@@ -2,7 +2,7 @@ name: Delete files and create empty folder
 
 on:
  workflow_run:
-    workflows: ["push_to_another_branch"]
+    workflows: ["push-md"]
     types:
       - completed
 
@@ -38,3 +38,5 @@ jobs:
           git add -A
           git commit -m "Delete all files from specified folder and create empty folder $FOLDER_NAME"
           git push
+
+       
