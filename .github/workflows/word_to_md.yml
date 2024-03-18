@@ -53,4 +53,4 @@ jobs:
           git config --global pull.rebase false  # Set the default behavior to merge when pulling changes
           git pull origin $TARGET_BRANCH --allow-unrelated-histories  # Fetch changes from the remote branch and allow unrelated histories
           git merge --strategy=recursive -X theirs origin/$TARGET_BRANCH --allow-unrelated-histories -m "Merge changes from remote branch"  # Merge changes from the remote branch
-          git push origin $TARGET_BRANCH  # Push changes to the target branch
+          git subtree push --prefix=combined origin $TARGET_BRANCH:markdown  # Push changes to the target branch under the 'combined' folder
