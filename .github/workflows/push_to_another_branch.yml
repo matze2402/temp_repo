@@ -1,8 +1,9 @@
 name: push_to_another_branch
 
 on:
-   repository_dispatch:
-    types: [push-md]
+  push:
+    branches:
+      - main
  
 
 jobs:
@@ -26,3 +27,10 @@ jobs:
           git add -A
           git diff-index --quiet HEAD ||  git commit -am "deploy files"  # commit to the repository (ignore if no modification)
           git push origin $TARGET_BRANCH # push to remote branch
+
+      - name: Dispatch trigger for pushing MD
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.ADMIN }}
+          repository: Matze2402/temp_repo
+          event-type: push-md
