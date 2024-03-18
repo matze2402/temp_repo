@@ -1,10 +1,8 @@
 name: Delete files and create empty folder
 
 on:
- workflow_run:
-    workflows: ["push-md"]
-    types:
-      - completed
+ repository_dispatch:
+    types: [push-md]
 
 jobs:
   delete_files_and_create_folder:
