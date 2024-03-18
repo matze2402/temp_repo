@@ -1,4 +1,4 @@
-name: Convert Word to Markdown
+name: Workflow 1
 
 on:
   push:
@@ -29,30 +29,4 @@ jobs:
           commit_message: "Convert Word to Markdown"
           commit_options: '--no-verify'
 
-  job2:
-    runs-on: ubuntu-latest
-    if: ${{ always() }}
-    needs: job1
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Pull changes from target branch
-        run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'MAtze2402'
-          git pull origin $TARGET_BRANCH
-
-      - name: Copy Markdown files to new branch
-        env:
-          SRC_FOLDER_PATH: 'combined'
-          TARGET_BRANCH: 'new_Branch'
-        run: |
-          mkdir temp_folder
-          cp $SRC_FOLDER_PATH/*.md temp_folder/  # Copy all Markdown files to a temporary folder
-          git checkout -b $TARGET_BRANCH || git checkout $TARGET_BRANCH  # Create or checkout to the target branch
-          cp temp_folder/*.md .  # Copy Markdown files from the temporary folder to the current directory
-          rm -rf temp_folder  # Remove the temporary folder
-          git add .  # Add all changes
-          git commit -m "Convert Word to Markdown"  # Commit changes
-          git push origin $TARGET_BRANCH  # Push changes to the target branch
+  
