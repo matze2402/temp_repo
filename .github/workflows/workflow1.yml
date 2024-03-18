@@ -23,6 +23,13 @@ jobs:
             rm "$file"
           done
 
+      - name: Dispatch trigger for pushing MD
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.ADMIN }}
+          repository: Matze2402/temp_repo
+          event-type: push-md
+
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
