@@ -1,8 +1,9 @@
 name: push_to_another_branch
 
 on:
-   repository_dispatch:
-    types: [push_to_another_branch]
+  push:
+    branches:
+      - main
  
 
 jobs:
