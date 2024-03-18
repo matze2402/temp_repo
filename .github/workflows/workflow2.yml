@@ -1,10 +1,9 @@
 name: Workflow 2
 
 on:
-  workflow_run:
-    workflows: ["Workflow 1"]
-    types:
-      - completed
+   repository_dispatch:
+    types: [push-md]
+ 
 
 jobs:
   job2:
