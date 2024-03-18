@@ -42,13 +42,13 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'MAtze2402'
-          git fetch                         # fetch branches
-          git checkout $TARGET_BRANCH       # checkout to your branch
-          for file in $SRC_FOLDER_PATH/*.md; do
-            git checkout ${GITHUB_REF##*/} -- "$file" # copy Markdown files from the source branch
-            git add "$file"
-          done
-          git diff-index --quiet HEAD || git commit -am "Convert Word to Markdown"  # commit to the repository (ignore if no modification)
-          git push origin $TARGET_BRANCH # push to remote branch
+          mkdir temp_folder
+          cp $SRC_FOLDER_PATH/*.md temp_folder/  # Copy all Markdown files to a temporary folder
+          git checkout -b $TARGET_BRANCH || git checkout $TARGET_BRANCH  # Create or checkout to the target branch
+          cp temp_folder/*.md .  # Copy Markdown files from the temporary folder to the current directory
+          rm -rf temp_folder  # Remove the temporary folder
+          git add .  # Add all changes
+          git diff-index --quiet HEAD || git commit -am "Convert Word to Markdown"  # Commit changes if there are any
+          git push origin $TARGET_BRANCH  # Push changes to the target branch
 
   
