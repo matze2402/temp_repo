@@ -50,6 +50,7 @@ jobs:
           git add .  # Add all changes
           git diff-index --quiet HEAD || git commit -am "Convert Word to Markdown"  # Commit changes if there are any
           git pull origin $TARGET_BRANCH  # Fetch changes from the remote branch
+          git config pull.rebase false  # Set the default behavior to merge when pulling changes
           git merge origin/$TARGET_BRANCH --allow-unrelated-histories  # Merge changes from the remote branch
           git push origin $TARGET_BRANCH  # Push changes to the target branch
 
