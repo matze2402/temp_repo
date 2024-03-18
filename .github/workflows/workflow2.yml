@@ -9,7 +9,8 @@ on:
 jobs:
   job2:
     runs-on: ubuntu-latest
-    
+    if: ${{ always() }}
+
     steps:
       - uses: actions/checkout@v2
       - name: copy
