@@ -25,4 +25,11 @@ jobs:
         git commit -m "Move .md files to destination_folder"
         git push
 
+    - name: Dispatch trigger for pushing MD
+      uses: peter-evans/repository-dispatch@v1
+      with:
+          token: ${{ secrets.ADMIN }}
+          repository: Matze2402/temp_repo
+          event-type: push_to_another_branch    
+
 
