@@ -29,7 +29,6 @@ jobs:
           commit_message: "Convert Word to Markdown"
           commit_options: '--no-verify'
 
- jobs:
   job2:
     runs-on: ubuntu-latest
     if: ${{ always() }}
@@ -37,7 +36,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
       - name: Copy Markdown files to new branch
         env:
           SRC_FOLDER_PATH: 'combined'
@@ -55,5 +53,4 @@ jobs:
           git config --global pull.rebase false  # Set the default behavior to merge when pulling changes
           git pull origin $TARGET_BRANCH --allow-unrelated-histories  # Fetch changes from the remote branch and allow unrelated histories
           git merge --strategy=recursive -X theirs origin/$TARGET_BRANCH --allow-unrelated-histories -m "Merge changes from remote branch"  # Merge changes from the remote branch
-          git subtree push --prefix=combined --squash origin $TARGET_BRANCH  # Push changes to the target branch under the 'combined' folder
-
+          git subtree push --prefix=combined origin $TARGET_BRANCH  # Push changes to the target branch under the 'combined' folder
