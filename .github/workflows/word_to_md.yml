@@ -49,3 +49,20 @@ jobs:
           git add -A
           git diff-index --quiet HEAD ||  git commit -am "deploy files"  # commit to the repository (ignore if no modification)
           git push origin $TARGET_BRANCH # push to remote branch
+
+  job3:
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: [job1, job2]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Delete files
+        run: |
+          TARGET_FOLDER='combined'
+          if [ -d "$TARGET_FOLDER" ]; then
+            rm -rf "$TARGET_FOLDER"/*
+          else
+            echo "Folder $TARGET_FOLDER does not exist."
+          fi
