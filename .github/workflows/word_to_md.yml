@@ -18,7 +18,7 @@ jobs:
 
       - name: Convert Word to Markdown
         run: |
-          for file in temp_repo/combined/*.docx; do
+          for file in combined/*.docx; do
             pandoc "$file" -o "${file%.docx}.md"
           done
 
