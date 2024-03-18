@@ -22,13 +22,7 @@ jobs:
             pandoc "$file" -o "${file%.docx}.md"
             rm "$file"
           done
-
-      - name: Dispatch trigger for pushing MD
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.ADMIN }}
-          repository: Matze2402/temp_repo
-          event-type: push-md
+        continue-on-error: true
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -36,4 +30,9 @@ jobs:
           commit_message: "Convert Word to Markdown"
           commit_options: '--no-verify'
 
-  
+      - name: Dispatch trigger for pushing MD
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.ADMIN }}
+          repository: Matze2402/temp_repo
+          event-type: push-md
