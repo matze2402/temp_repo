@@ -2,7 +2,7 @@ name: push_to_another_branch
 
 on:
    repository_dispatch:
-    types: [push-md]
+    types: [push_to_another_branch]
  
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
       - name: copy
         env:
           SRC_FOLDER_PATH: 'combined'
-          TARGET_BRANCH: 'new_Branch'
+          TARGET_BRANCH: 'destination_folder'
         run: |
           files=$(find $SRC_FOLDER_PATH -type f) # get the file list
           git config --global user.name 'GitHub Action'
