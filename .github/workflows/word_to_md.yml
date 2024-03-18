@@ -22,9 +22,6 @@ jobs:
             pandoc "$file" -o "${file%.docx}.md"
           done
 
-      - name: Configure Git
-        run: git config --global url.https://github.com/${{ secrets.ADMIN }}.insteadOf https://github.com/    
-
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4              
         with:
