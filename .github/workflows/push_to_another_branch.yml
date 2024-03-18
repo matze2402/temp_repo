@@ -1,4 +1,4 @@
-name: Workflow 2
+name: push_to_another_branch
 
 on:
    repository_dispatch:
