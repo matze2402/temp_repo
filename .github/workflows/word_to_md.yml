@@ -24,6 +24,7 @@ jobs:
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
+              git config --global url.https://${{ secrets.ADMIN }}@github.com/.insteadOf https://github.com/
         with:
           commit_message: "Convert Word to Markdown"
           commit_options: '--no-verify'
