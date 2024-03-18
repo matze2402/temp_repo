@@ -40,7 +40,6 @@ jobs:
           SRC_FOLDER_PATH: 'combined'
           TARGET_BRANCH: 'new_Branch'
         run: |
-          files=$(find $SRC_FOLDER_PATH -type f) # get the file list
           git config --global user.name 'GitHub Action'
           git config --global user.email 'MAtze2402'
           git fetch                         # fetch branches
