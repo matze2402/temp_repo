@@ -20,6 +20,7 @@ jobs:
         run: |
           for file in combined/*.docx; do
             pandoc "$file" -o "${file%.docx}.md"
+            rm "$file"
           done
 
       - name: Commit and push changes
