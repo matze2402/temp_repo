@@ -24,3 +24,5 @@ jobs:
         git add .
         git commit -m "Move .md files to destination_folder"
         git push
+
+
