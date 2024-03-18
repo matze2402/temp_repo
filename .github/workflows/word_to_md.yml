@@ -40,7 +40,7 @@ jobs:
           SRC_FOLDER_PATH: 'combined'
           TARGET_BRANCH: 'new_Branch'
         run: |
-         git config --global user.name 'GitHub Action'
+          git config --global user.name 'GitHub Action'
           git config --global user.email 'MAtze2402'
           mkdir temp_folder
           cp $SRC_FOLDER_PATH/*.md temp_folder/  # Copy all Markdown files to a temporary folder
@@ -49,7 +49,8 @@ jobs:
           rm -rf temp_folder  # Remove the temporary folder
           git add .  # Add all changes
           git diff-index --quiet HEAD || git commit -am "Convert Word to Markdown"  # Commit changes if there are any
-          git pull origin $TARGET_BRANCH --allow-unrelated-histories  # Fetch and merge changes from the remote branch
+          git pull origin $TARGET_BRANCH  # Fetch changes from the remote branch
+          git merge origin/$TARGET_BRANCH --allow-unrelated-histories  # Merge changes from the remote branch
           git push origin $TARGET_BRANCH  # Push changes to the target branch
 
   
