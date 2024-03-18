@@ -1,0 +1,26 @@
+name: push_to_another_branch
+
+on:
+   repository_dispatch:
+    types: [push-md]
+
+jobs:
+  move_md_files:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Move MD files
+      run: |
+        mkdir -p destination_folder  # create destination folder if it doesn't exist
+        find combined -name "*.md" -exec mv {} destination_folder \;
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Matze2402"
+        git add .
+        git commit -m "Move .md files to destination_folder"
+        git push
