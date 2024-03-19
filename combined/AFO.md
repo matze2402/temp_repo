@@ -85,7 +85,7 @@ folder: combined
 ## Comments
 
 No persistant URL to ontology-file available, thus a copy of the ontology is hosted in this github-repo in subdirectory ./ontologies/ 
-No reasoning possible with FacT++ , as problems with xml:date persist
+No reasoning possible with FacT++ , as problems with xml:date persist.
 
 Reasoning works with HermiT. Listed below are the number of axioms of the respective subview of the AFO
 afo/rec/2022/09/afo.ttl -> 15268    INFO  09:43:25  Ontologies processed in 27652 ms by HermiT
