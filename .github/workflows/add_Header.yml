@@ -18,17 +18,15 @@ jobs:
       - name: Add Header to Markdown Files
         run: |
           for file in combined/*.md; do
-            # Check if the file starts with a YAML front matter
-            if [[ $(head -n 1 "$file") == '---' ]]; then
-              echo "Header already exists in $file. Skipping..."
+            # Extract title from Markdown content
+            title=$(grep -E -m 1 '^##[^#]' "$file" | sed 's/^## //')
+            if [ -z "$title" ]; then
+              echo "Title not found in $file"
               continue
             fi
 
-            # Extract title from Markdown content
-            title=$(grep -E -m 1 '^##[^#]' "$file" | sed 's/^## //')
-  
             # Construct header
-            last_updated=$(date -r "$file" "+%B %d, %Y")
+            last_updated=$(date "+%B %d, %Y")
             permalink=$(basename "$file" .md).html
 
             echo '---' > tmpfile
