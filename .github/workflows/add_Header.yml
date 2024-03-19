@@ -16,7 +16,7 @@ jobs:
       - name: Add Header to Markdown Files
         run: |
           for file in combined/*.md; do
-            title=$(awk '/^## Ontology$/{getline; print}' "$file" | sed 's/^ *//')
+            title=$(awk '/^## Ontology$/{p=1; next} p && /^##/{exit} p && NF{print}' "$file" | sed 's/^ *//')
             last_updated=$(date -r "$file" "+%B %d, %Y")
             permalink=$(basename "$file" .md).html
 
