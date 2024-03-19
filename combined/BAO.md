@@ -22,7 +22,7 @@ folder: combined
 | Full Name | BioAssay Ontology |
 | Synonyms/Alternative Names | - |
 | Ontology Acronym | BAO |
-| Creator(s) & Issuing Organisation | Hande Küçük McGinty, Janice Kranz, Joseph Ostrow, Alex Clark, Yu Lin, Saminda Abeyruwan, Uma Vempati, Kunie Sakurai, Vance Lemmon, Ubbo Visser, John Turner, Nicolette Ross, Joan Glenny-Pescov, Jiaming Hu, Caty Chung, Stephan Schurer* |
+| Creator(s) & Issuing Organisation | Hande KÃ¼Ã§Ã¼k McGinty, Janice Kranz, Joseph Ostrow, Alex Clark, Yu Lin, Saminda Abeyruwan, Uma Vempati, Kunie Sakurai, Vance Lemmon, Ubbo Visser, John Turner, Nicolette Ross, Joan Glenny-Pescov, Jiaming Hu, Caty Chung, Stephan Schurer* |
 | Nature of Organisational Structure | University of Miami, Ontology is still actively maintained |
 
 ## References
@@ -84,5 +84,5 @@ folder: combined
 
 ## Comments
 
-Describes chemical biology screening assays and their results including high-throughput screening (HTS) data for the purpose of categorizing assays and data analysis.
+Describes Chemical biology screening assays and their results including high-throughput screening (HTS) data for the purpose of categorizing assays and data analysis.
 Quite applied and in active development, see also here: http://bioassayontology.org/bao-bioportal/ 
