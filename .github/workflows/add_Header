@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - new_Branch  # Adjust to the name of your desired branch
+    paths:
+      - 'combined/*.md'
 
 jobs:
   add_header:
@@ -16,7 +18,7 @@ jobs:
       - name: Add Header to Markdown Files
         run: |
           for file in combined/*.md; do
-            title=$(awk '/^## Ontology$/{p=1; next} p && /^##/{exit} p && NF{print}' "$file" | sed 's/^ *//')
+            title=$(awk '/^# / {gsub(/# /,""); print; exit}' "$file")
             last_updated=$(date -r "$file" "+%B %d, %Y")
             permalink=$(basename "$file" .md).html
 
@@ -38,7 +40,7 @@ jobs:
       - name: Commit Changes
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "Matze2402"
+          git config --local user.name "GitHub Action"
           git add combined/*.md
-          git commit -m "Add header to Markdown files"
+          git diff --cached --exit-code || git commit -m "Add header to Markdown files"
           git push
