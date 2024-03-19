@@ -18,7 +18,16 @@ jobs:
       - name: Add Header to Markdown Files
         run: |
           for file in combined/*.md; do
-            title=$(grep -m 1 '## ' "$file" | sed 's/^## //')
+            # Check if the file starts with a YAML front matter
+            if [[ $(head -n 1 "$file") == '---' ]]; then
+              echo "Header already exists in $file. Skipping..."
+              continue
+            fi
+
+            # Extract title from Markdown content
+            title=$(grep -E -m 1 '^##[^#]' "$file" | sed 's/^## //')
+  
+            # Construct header
             last_updated=$(date -r "$file" "+%B %d, %Y")
             permalink=$(basename "$file" .md).html
 
@@ -33,7 +42,11 @@ jobs:
             echo "permalink: $permalink" >> tmpfile
             echo 'folder: combined' >> tmpfile
             echo '---' >> tmpfile
+
+            # Append existing Markdown content
             cat "$file" >> tmpfile
+
+            # Replace original file with updated content
             mv tmpfile "$file"
           done
 
