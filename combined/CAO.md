@@ -22,7 +22,7 @@ folder: combined
 | Full Name | Chemical Analysis Ontology |
 | Synonyms/Alternative Names | - |
 | Ontology Acronym | CAO |
-| Creator(s) & Issuing Organisation | Stuart Chalk |
+| Creator(s) & Issuing Organisation | Stuart Chalk d|
 | Nature of Organisational Structure | terminated consortium of the EMMC |d
 
 ## References
