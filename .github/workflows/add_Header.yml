@@ -17,8 +17,13 @@ jobs:
 
       - name: Add Header to Markdown Files
         run: |
-          for file in combined/*.md; do  # Update folder name
-            title=$(awk '/^# / {gsub(/# /,""); print; exit}' "$file")
+          for file in combined/*.md; do
+            title=$(awk '/^# /{sub(/^# /, ""); print; exit}' "$file")
+            if [ -z "$title" ]; then
+              echo "Title not found in $file"
+              continue
+            fi
+
             last_updated=$(date -r "$file" "+%B %d, %Y")
             permalink=$(basename "$file" .md).html
 
@@ -31,7 +36,7 @@ jobs:
             echo 'summary:' >> tmpfile
             echo 'sidebar: mydoc_sidebar' >> tmpfile
             echo "permalink: $permalink" >> tmpfile
-            echo 'folder: combined' >> tmpfile  # Update folder name
+            echo 'folder: combined' >> tmpfile
             echo '---' >> tmpfile
             cat "$file" >> tmpfile
             mv tmpfile "$file"
@@ -40,7 +45,7 @@ jobs:
       - name: Commit Changes
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "Matze2402"
-          git add combined/*.md  # Update folder name
+          git config --local user.name "matze2402"
+          git add combined/*.md
           git diff --cached --exit-code || git commit -m "Add header to Markdown files"
           git push
