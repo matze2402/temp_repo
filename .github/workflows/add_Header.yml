@@ -67,9 +67,9 @@ jobs:
           git diff --cached --exit-code || git commit -m "Update last_updated timestamp and permalink in Markdown files"
           git push
 
-      - name: Dispatch trigger for pushing MD
+      - name: Dispatch trigger for deleting
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.ADMIN }}
           repository: Matze2402/temp_repo
-          event-type: delete    
+          event-type: push-md   
