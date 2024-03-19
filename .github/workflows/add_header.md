@@ -1,0 +1,75 @@
+name: Add Header to Markdown Files
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'combined/*.md'  # Update folder name
+
+jobs:
+  add_header:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Add Header to Markdown Files
+        run: |
+          for file in combined/*.md; do
+            # Check if the file starts with a YAML front matter
+            if [[ $(head -n 1 "$file") != '---' ]]; then
+              # Extract title from Markdown content
+              title=$(grep -E -m 1 '^##[^#]' "$file" | sed 's/^## //')
+              if [ -z "$title" ]; then
+                echo "Title not found in $file"
+                continue
+              fi
+
+              # Construct header
+              last_updated=$(date "+%B %d, %Y")
+              permalink=$(basename "$file" .md)
+              permalink="n4cat_ontoworldmap_${permalink}.html"
+
+              echo '---' > tmpfile
+              echo "title: $title" >> tmpfile
+              echo 'tags: [ontology]' >> tmpfile
+              echo 'keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web' >> tmpfile
+              echo "last_updated: $last_updated" >> tmpfile
+              echo 'datatable: true' >> tmpfile
+              echo 'summary:' >> tmpfile
+              echo 'sidebar: mydoc_sidebar' >> tmpfile
+              echo "permalink: $permalink" >> tmpfile
+              echo 'folder: combined' >> tmpfile
+              echo '---' >> tmpfile
+
+              # Append existing Markdown content
+              cat "$file" >> tmpfile
+
+              # Replace original file with updated content
+              mv tmpfile "$file"
+            else
+              # Update last_updated timestamp in the header
+              last_updated=$(date "+%B %d, %Y")
+              permalink=$(basename "$file" .md)
+              permalink="n4cat_ontoworldmap_${permalink}.html"
+              sed -i "s/^last_updated:.*/last_updated: $last_updated/" "$file"
+              sed -i "s/^permalink:.*/permalink: $permalink/" "$file"
+            fi
+          done
+
+      - name: Commit Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "matze2402"
+          git add combined/*.md
+          git diff --cached --exit-code || git commit -m "Update last_updated timestamp and permalink in Markdown files"
+          git push
+
+      - name: Dispatch trigger for deleting
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.ADMIN }}
+          repository: Matze2402/temp_repo
+          event-type: push-md   
