@@ -29,7 +29,8 @@ jobs:
 
               # Construct header
               last_updated=$(date "+%B %d, %Y")
-              permalink=$(basename "n4cat_ontoworldmap_$file" .md).html
+              permalink=$(basename "$file" .md).html
+              permalink="n4cat_ontoworldmap_${permalink}.html"
 
               echo '---' > tmpfile
               echo "title: $title" >> tmpfile
