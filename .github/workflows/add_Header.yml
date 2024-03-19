@@ -3,7 +3,7 @@ name: Add Header to Markdown Files
 on:
   push:
     branches:
-      - new_Branch  # Replace "your_branch_name" with the name of your desired branch
+      - new_Branch  # Adjust to the name of your desired branch
 
 jobs:
   add_header:
@@ -16,7 +16,7 @@ jobs:
       - name: Add Header to Markdown Files
         run: |
           for file in combined/*.md; do
-            title=$(awk '/^## Ontology/{getline; getline; print $NF; exit}' "$file")
+            title=$(awk '/^## Ontology$/{getline; print}' "$file" | sed 's/^ *//')
             last_updated=$(date -r "$file" "+%B %d, %Y")
             permalink=$(basename "$file" .md).html
 
