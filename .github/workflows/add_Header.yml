@@ -52,7 +52,8 @@ jobs:
             else
               # Update last_updated timestamp in the header
               last_updated=$(date "+%B %d, %Y")
-              permalink=$(basename "$file" .md).html
+              permalink=$(basename "$file" .md)
+              permalink="n4cat_ontoworldmap_${permalink}.html"
               sed -i "s/^last_updated:.*/last_updated: $last_updated/" "$file"
               sed -i "s/^permalink:.*/permalink: $permalink/" "$file"
             fi
