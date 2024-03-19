@@ -73,4 +73,4 @@
 
 ## Comments
 
-contains plenty of substance names and short definition as string, as well as additional information on molecules like Average Mass, aligned partially to NIST,IUPAC, NC-IUBMB
+contains plenty of substance names and short definition as string, as well as additional information on molecules like Average Mass aligned partially to NIST,IUPAC, NC-IUBMB
