@@ -1,0 +1,44 @@
+name: Add Header to Markdown Files
+
+on:
+  push:
+    branches:
+      - new_Branch  # Replace "your_branch_name" with the name of your desired branch
+
+jobs:
+  add_header:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Add Header to Markdown Files
+        run: |
+          for file in combined/*.md; do
+            title=$(awk '/^## Ontology/{getline; getline; print $NF; exit}' "$file")
+            last_updated=$(date -r "$file" "+%B %d, %Y")
+            permalink=$(basename "$file" .md).html
+
+            echo '---' > tmpfile
+            echo "title: $title" >> tmpfile
+            echo 'tags: [ontology]' >> tmpfile
+            echo 'keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web' >> tmpfile
+            echo "last_updated: $last_updated" >> tmpfile
+            echo 'datatable: true' >> tmpfile
+            echo 'summary:' >> tmpfile
+            echo 'sidebar: mydoc_sidebar' >> tmpfile
+            echo "permalink: $permalink" >> tmpfile
+            echo 'folder: n4cat_ontoWorldMap/ontology_metadata' >> tmpfile
+            echo '---' >> tmpfile
+            cat "$file" >> tmpfile
+            mv tmpfile "$file"
+          done
+
+      - name: Commit Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Matze2402"
+          git add combined/*.md
+          git commit -m "Add header to Markdown files"
+          git push
