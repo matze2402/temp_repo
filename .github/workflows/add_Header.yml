@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - new_Branch
-    paths:
-      - 'combined/*.md'  # Update folder name
+    #paths:
+      #- 'combined/*.md'  # Update folder name
 
 jobs:
   add_header:
