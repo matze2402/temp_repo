@@ -3,9 +3,9 @@ name: Add Header to Markdown Files
 on:
   push:
     branches:
-      - new_Branch  # Adjust to the name of your desired branch
+      - new_Branch
     paths:
-      - 'combined/*.md'
+      - 'combined/*.md'  # Update folder name
 
 jobs:
   add_header:
@@ -17,7 +17,7 @@ jobs:
 
       - name: Add Header to Markdown Files
         run: |
-          for file in combined/*.md; do
+          for file in combined/*.md; do  # Update folder name
             title=$(awk '/^# / {gsub(/# /,""); print; exit}' "$file")
             last_updated=$(date -r "$file" "+%B %d, %Y")
             permalink=$(basename "$file" .md).html
@@ -31,7 +31,7 @@ jobs:
             echo 'summary:' >> tmpfile
             echo 'sidebar: mydoc_sidebar' >> tmpfile
             echo "permalink: $permalink" >> tmpfile
-            echo 'folder: n4cat_ontoWorldMap/ontology_metadata' >> tmpfile
+            echo 'folder: combined' >> tmpfile  # Update folder name
             echo '---' >> tmpfile
             cat "$file" >> tmpfile
             mv tmpfile "$file"
@@ -40,7 +40,7 @@ jobs:
       - name: Commit Changes
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add combined/*.md
+          git config --local user.name "Matze2402"
+          git add combined/*.md  # Update folder name
           git diff --cached --exit-code || git commit -m "Add header to Markdown files"
           git push
