@@ -1,3 +1,14 @@
+---
+title: OntoCAPE - Ontology for the domain of Computer Aided Process Engineering
+tags: [ontology]
+keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
+last_updated: March 19, 2024
+datatable: true
+summary:
+sidebar: mydoc_sidebar
+permalink: n4cat_ontoworldmap_OntoCAPE.html
+folder: combined
+---
 ## OntoCAPE - Ontology for the domain of Computer Aided Process Engineering
 
 
