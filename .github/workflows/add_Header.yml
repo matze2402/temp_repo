@@ -18,40 +18,21 @@ jobs:
       - name: Add Header to Markdown Files
         run: |
           for file in combined/*.md; do
-            # Extract title from Markdown content
-            title=$(grep -E -m 1 '^##[^#]' "$file" | sed 's/^## //')
-            if [ -z "$title" ]; then
-              echo "Title not found in $file"
+            # Check if the file starts with a YAML front matter
+            if [[ $(head -n 1 "$file") != '---' ]]; then
+              echo "Header not found in $file. Skipping..."
               continue
             fi
 
-            # Construct header
+            # Update last_updated timestamp in the header
             last_updated=$(date "+%B %d, %Y")
-            permalink=$(basename "$file" .md).html
-
-            echo '---' > tmpfile
-            echo "title: $title" >> tmpfile
-            echo 'tags: [ontology]' >> tmpfile
-            echo 'keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web' >> tmpfile
-            echo "last_updated: $last_updated" >> tmpfile
-            echo 'datatable: true' >> tmpfile
-            echo 'summary:' >> tmpfile
-            echo 'sidebar: mydoc_sidebar' >> tmpfile
-            echo "permalink: $permalink" >> tmpfile
-            echo 'folder: combined' >> tmpfile
-            echo '---' >> tmpfile
-
-            # Append existing Markdown content
-            cat "$file" >> tmpfile
-
-            # Replace original file with updated content
-            mv tmpfile "$file"
+            sed -i "s/^last_updated:.*/last_updated: $last_updated/" "$file"
           done
 
       - name: Commit Changes
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "matze2402"
+          git config --local user.name "Matze2402"
           git add combined/*.md
-          git diff --cached --exit-code || git commit -m "Add header to Markdown files"
+          git diff --cached --exit-code || git commit -m "Update last_updated timestamp in Markdown files"
           git push
