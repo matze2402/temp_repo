@@ -1,3 +1,14 @@
+---
+title: 
+tags: [ontology]
+keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
+last_updated: March 19, 2024
+datatable: true
+summary:
+sidebar: mydoc_sidebar
+permalink: BFO.html
+folder: n4cat_ontoWorldMap/ontology_metadata
+---
 \## Ontology
 
 \|Aspect \|Description\| \|:\-\--\|:\-\--\| \| Full Name \| Basic Formal
