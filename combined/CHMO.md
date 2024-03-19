@@ -1,3 +1,14 @@
+---
+title: CHMO - Chemical Methods Ontology
+tags: [ontology]
+keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
+last_updated: March 19, 2024
+datatable: true
+summary:
+sidebar: mydoc_sidebar
+permalink: CHMO.html
+folder: combined
+---
 ## CHMO - Chemical Methods Ontology
 
 

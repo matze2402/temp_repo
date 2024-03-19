@@ -1,3 +1,14 @@
+---
+title: EMMO - Elementary Multiperspective Material Ontology
+tags: [ontology]
+keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
+last_updated: March 19, 2024
+datatable: true
+summary:
+sidebar: mydoc_sidebar
+permalink: EMMO.html
+folder: combined
+---
 ## EMMO - Elementary Multiperspective Material Ontology
 
 

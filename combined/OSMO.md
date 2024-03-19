@@ -1,3 +1,14 @@
+---
+title: OSMO - Ontology for Simulation, Modelling, and Optimization
+tags: [ontology]
+keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
+last_updated: March 19, 2024
+datatable: true
+summary:
+sidebar: mydoc_sidebar
+permalink: OSMO.html
+folder: combined
+---
 ## OSMO - Ontology for Simulation, Modelling, and Optimization
 
 

@@ -1,3 +1,14 @@
+---
+title: MS - Mass Spectrometry Ontology
+tags: [ontology]
+keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
+last_updated: March 19, 2024
+datatable: true
+summary:
+sidebar: mydoc_sidebar
+permalink: MS.html
+folder: combined
+---
 ## MS - Mass Spectrometry Ontology
 
 
