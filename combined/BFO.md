@@ -1,31 +1,4 @@
----
-title: |Aspect |Description| 
-|:---|:---|
-| Full Name | Basic Formal Ontology |
-| Synonyms/Alternative Names | Basic Formal Ontology 2.0, BFO2.0 |
-| Ontology Acronym | BFO |
-| Creator(s) & Issuing Organisation | Volkswagen Foundation, Barry Smith, and Pierre Grenon initial authors. More important contributions by many people |
-| Nature of Organisational Structure | ISO Standard |
-tags: [ontology]
-keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
-last_updated: March 19, 2024
-datatable: true
-summary:
-sidebar: mydoc_sidebar
-permalink: BFO.html
-folder: n4cat_ontoWorldMap/ontology_metadata
----
----
-title: 
-tags: [ontology]
-keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
-last_updated: March 19, 2024
-datatable: true
-summary:
-sidebar: mydoc_sidebar
-permalink: BFO.html
-folder: n4cat_ontoWorldMap/ontology_metadata
----
+
 ## BFO - Basic Formal Ontology
 
 
