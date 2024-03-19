@@ -2,7 +2,7 @@ name: Delete files and create empty folder
 
 on:
  repository_dispatch:
-    types: [push-md]
+    types: [delete]
 
 jobs:
   delete_files_and_create_folder:
