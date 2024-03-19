@@ -9,6 +9,17 @@ sidebar: mydoc_sidebar
 permalink: BFO.html
 folder: combined
 ---
+---
+title: BFO - Basic Formal Ontology
+tags: [ontology]
+keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
+last_updated: March 19, 2024
+datatable: true
+summary:
+sidebar: mydoc_sidebar
+permalink: BFO.html
+folder: combined
+---
 
 
 ## BFO - Basic Formal Ontology
