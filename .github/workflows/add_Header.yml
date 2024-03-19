@@ -22,12 +22,14 @@ jobs:
             if [[ $(head -n 1 "$file") != '---' ]]; then
               # Extract title from Markdown content
               title=$(grep -E -m 1 '^##[^#]' "$file" | sed 's/^## //')
-              permalink=$(basename "$file" .md).html
+              if [ -z "$title" ]; then
+                echo "Title not found in $file"
+                continue
               fi
 
               # Construct header
               last_updated=$(date "+%B %d, %Y")
-             
+              permalink=$(basename "$file" .md).html
 
               echo '---' > tmpfile
               echo "title: $title" >> tmpfile
@@ -58,7 +60,7 @@ jobs:
       - name: Commit Changes
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.name "matze2402"
           git add combined/*.md
           git diff --cached --exit-code || git commit -m "Update last_updated timestamp and permalink in Markdown files"
           git push
