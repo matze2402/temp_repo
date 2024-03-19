@@ -18,7 +18,7 @@ jobs:
       - name: Add Header to Markdown Files
         run: |
           for file in combined/*.md; do
-            title=$(awk '/^# /{sub(/^# /, ""); print; exit}' "$file")
+            title=$(grep -m 1 '## ' "$file" | sed 's/^## //')
             if [ -z "$title" ]; then
               echo "Title not found in $file"
               continue
