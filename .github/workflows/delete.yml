@@ -1,14 +1,9 @@
 name: Delete files and create empty folder
 
-#on:
- #repository_dispatch:
-    #types: [delete]
 on:
-  push:
-    branches:
-      - new_Branch
-    paths:
-      - 'combined/*.md'  # Update folder name
+ repository_dispatch:
+    types: [push-md]
+
 
 jobs:
   delete_files_and_create_folder:
