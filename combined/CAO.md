@@ -23,7 +23,7 @@ folder: combined
 | Synonyms/Alternative Names | - |
 | Ontology Acronym | CAO |
 | Creator(s) & Issuing Organisation | Stuart Chalk |
-| Nature of Organisational Structure | terminated consortium of the EMMC |
+| Nature of Organisational Structure | terminated consortium of the EMMC |d
 
 ## References
 
