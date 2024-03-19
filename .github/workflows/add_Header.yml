@@ -19,11 +19,6 @@ jobs:
         run: |
           for file in combined/*.md; do
             title=$(grep -m 1 '## ' "$file" | sed 's/^## //')
-            if [ -z "$title" ]; then
-              echo "Title not found in $file"
-              continue
-            fi
-
             last_updated=$(date -r "$file" "+%B %d, %Y")
             permalink=$(basename "$file" .md).html
 
