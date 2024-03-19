@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - new_Branch
-    #paths:
-      #- 'combined/*.md'  # Update folder name
+    paths:
+      - 'combined/*.md'  # Update folder name
 
 jobs:
   add_header:
@@ -66,3 +66,10 @@ jobs:
           git add combined/*.md
           git diff --cached --exit-code || git commit -m "Update last_updated timestamp and permalink in Markdown files"
           git push
+
+      - name: Dispatch trigger for pushing MD
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.ADMIN }}
+          repository: Matze2402/temp_repo
+          event-type: delete    
