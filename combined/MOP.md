@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: MOP.html
+permalink: n4cat_ontoworldmap_MOP.html
 folder: combined
 ---
 ## MOP - Molecular Process Ontology

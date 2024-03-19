@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: OM.html
+permalink: n4cat_ontoworldmap_OM.html
 folder: combined
 ---
 ## OM - Ontology of units of Measure

@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: ChEBI.html
+permalink: n4cat_ontoworldmap_ChEBI.html
 folder: combined
 ---
 ## ChEBI - Chemical Entities of Biological Interest

@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: VIMMP.html
+permalink: n4cat_ontoworldmap_VIMMP.html
 folder: combined
 ---
 ## VIMMP - Virtual Materials Marketplace Ontology

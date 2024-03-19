@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: OntoCAPE.html
+permalink: n4cat_ontoworldmap_OntoCAPE.html
 folder: combined
 ---
 ## OntoCAPE - Ontology for the domain of Computer Aided Process Engineering

@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: RXNO.html
+permalink: n4cat_ontoworldmap_RXNO.html
 folder: combined
 ---
 ## RXNO - RXNO: name reaction ontology

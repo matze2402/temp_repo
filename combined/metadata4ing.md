@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: metadata4ing.html
+permalink: n4cat_ontoworldmap_metadata4ing.html
 folder: combined
 ---
 ## metadata4ing - Metadata4Ing: An ontology for describing the generation of research data within a scientific activity.

@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: CAO.html
+permalink: n4cat_ontoworldmap_CAO.html
 folder: combined
 ---
 ## CAO - Chemical Analysis Ontology

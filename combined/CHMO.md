@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: CHMO.html
+permalink: n4cat_ontoworldmap_CHMO.html
 folder: combined
 ---
 ## CHMO - Chemical Methods Ontology

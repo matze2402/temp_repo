@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: EMMO.html
+permalink: n4cat_ontoworldmap_EMMO.html
 folder: combined
 ---
 ## EMMO - Elementary Multiperspective Material Ontology

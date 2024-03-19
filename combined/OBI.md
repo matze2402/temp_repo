@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: OBI.html
+permalink: n4cat_ontoworldmap_OBI.html
 folder: combined
 ---
 ## OBI - Ontology for Biomedical Investigations

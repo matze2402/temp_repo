@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: REX.html
+permalink: n4cat_ontoworldmap_REX.html
 folder: combined
 ---
 ## REX - Physico-chemical process

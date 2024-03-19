@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: EDAM.html
+permalink: n4cat_ontoworldmap_EDAM.html
 folder: combined
 ---
 ---
@@ -17,7 +17,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: EDAM.html
+permalink: n4cat_ontoworldmap_EDAM.html
 folder: combined
 ---
 ## EDAM - EDAM - Bioscientific data analysis ontology

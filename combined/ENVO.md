@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: ENVO.html
+permalink: n4cat_ontoworldmap_ENVO.html
 folder: combined
 ---
 ---
@@ -17,7 +17,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: ENVO.html
+permalink: n4cat_ontoworldmap_ENVO.html
 folder: combined
 ---
 ## ENVO - Environmental Ontology

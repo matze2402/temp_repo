@@ -6,7 +6,7 @@ last_updated: March 19, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
-permalink: BAO.html
+permalink: n4cat_ontoworldmap_BAO.html
 folder: combined
 ---
 ## BAO - BioAssay Ontology
