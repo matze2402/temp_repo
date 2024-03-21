@@ -1,0 +1,26 @@
+name: Push Folder to Another Repository
+
+on:
+ repository_dispatch:
+    types: [push]
+
+jobs:
+  push-folder:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Clone target repository
+        run: git clone https://github.com/matze2402/main_repo.git main_repo
+
+      - name: Copy folder to target repository
+        run: |
+          cp -r combined/* main_repo/all_data
+          cd main_repo
+          git config --local user.email "action@github.com"
+          git config --local user.name "matze2402"
+          git add .
+          git commit -m "Copy files from source repository"
+          git push origin main:github_io_pages
