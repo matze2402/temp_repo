@@ -33,4 +33,4 @@ jobs:
         with:
           token: ${{ secrets.ADMIN }}
           repository: Matze2402/temp_repo
-          event-type: delete   
+          event-type: push 
