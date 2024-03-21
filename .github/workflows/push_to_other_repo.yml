@@ -17,12 +17,15 @@ jobs:
 
       - name: Copy folder to target repository
         run: |
-          cp -r combined/* main_repo/all_data
+          cp -r combined/* main_repo/files
           cd main_repo
           git config --local user.email "action@github.com"
           git config --local user.name "matze2402"
+          git config --global url.https://${{ secrets.token}}@github.com/.insteadOf https://github.com/
           git add .
           git commit -m "Copy files from source repository"
+          git config pull.rebase false
+          git pull origin github_io_pages
           git push origin main:github_io_pages
 
       - name: Dispatch trigger for deleting
