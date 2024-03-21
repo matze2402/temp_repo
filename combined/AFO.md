@@ -2,7 +2,7 @@
 title: AFO - Allotrope Foundation Ontology
 tags: [ontology]
 keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
-last_updated: March 20, 2024
+last_updated: March 21, 2024
 datatable: true
 summary:
 sidebar: mydoc_sidebar
