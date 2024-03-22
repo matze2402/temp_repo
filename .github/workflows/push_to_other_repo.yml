@@ -29,7 +29,12 @@ jobs:
           git pull origin github_io_pages
           git push origin main:github_io_pages
 
-      - name: Resolve merge conflicts
-        run: git mergetool
+      - name: Check for merge conflicts
+        id: check_conflicts
+        run: |
+          git merge-base --is-ancestor HEAD FETCH_HEAD || exit 0
+          exit 1
 
-    
+      - name: Resolve merge conflicts
+        if: steps.check_conflicts.outcome == 'failure'
+        run: git mergetool
