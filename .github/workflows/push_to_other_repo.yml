@@ -18,7 +18,7 @@ jobs:
 
       - name: Copy folder to target repository
         run: |
-          cp -r combined/* main_repo/alles
+          cp -r combined/* main_repo/alles  
           cd main_repo
           git config --local user.email "action@github.com"
           git config --local user.name "matze2402"
@@ -28,13 +28,3 @@ jobs:
           git config pull.rebase false
           git pull origin github_io_pages
           git push origin main:github_io_pages
-
-      - name: Check for merge conflicts
-        id: check_conflicts
-        run: |
-          git merge-base --is-ancestor HEAD FETCH_HEAD || exit 0
-          exit 1
-
-      - name: Resolve merge conflicts
-        if: steps.check_conflicts.outcome == 'failure'
-        run: git mergetool
