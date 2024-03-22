@@ -1,14 +1,3 @@
----
-title: AFO - Allotrope Foundation Ontology
-tags: [ontology]
-keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
-last_updated: March 22, 2024
-datatable: true
-summary:
-sidebar: mydoc_sidebar
-permalink: n4cat_ontoworldmap_AFO.html
-folder: combined
----
 ## AFO - Allotrope Foundation Ontology
 
 
@@ -85,12 +74,12 @@ folder: combined
 ## Comments
 
 No persistant URL to ontology-file available, thus a copy of the ontology is hosted in this github-repo in subdirectory ./ontologies/ 
-No reasoning possible with FacT++ , as problems with xml:date persifst.
+No reasoning possible with FacT++ , as problems with xml:date persist.
 
 Reasoning works with HermiT. Listed below are the number of axioms of the respective subview of the AFO
 afo/rec/2022/09/afo.ttl -> 15268    INFO  09:43:25  Ontologies processed in 27652 ms by HermiT
 afo/CR/2022/09/afo.ttl -> 54
-afo/WD/2022/09/afo.ttl -> 15365  INFO  09:44:46  Ontologies processed in 5545 ms by HermiT
+afo/WD/2022/09/afo.ttl -> 15365  INFO  09:44:46  Ontologies procnessed in 5545 ms by HddermiT
 afo/merged/REC/2022/09/merged -> 40505
 afo/merged/REC/2022/09/merged-without-qudt -> 24409   INFO  09:49:23  Ontologies processed in 72411 ms by HermiT
 afo/merged/REC/2022/09/merged-without-qudt-inferred -> 24605    INFO  09:52:24  Ontologies processed in 109828 ms by HermiT
