@@ -73,4 +73,4 @@
 
 ## Comments
 
-Good conceptual description of reactions. Strongly connected with the RXNO. Itf contains the underlying molecular processes, for example cyclization, methylation and demethylation. TEST
+Good conceptual description of reactions. Strongly connected with the RXNO. It contains the underlying molecular processes, for example cyclization, methylation and demethylation.
