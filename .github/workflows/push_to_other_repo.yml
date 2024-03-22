@@ -29,4 +29,7 @@ jobs:
           git pull origin github_io_pages
           git push origin main:github_io_pages
 
+      - name: Resolve merge conflicts
+        run: git mergetool
+
     
