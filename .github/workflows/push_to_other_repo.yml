@@ -26,7 +26,7 @@ jobs:
           git commit -m "Copy files from source repository"
           git config pull.rebase false
           git pull --no-edit --strategy-option=theirs origin main  # Konflikte automatisch mit "theirs" Strategie beheben
-          git push origin HEAD:github_io_pages
+          git push --force origin HEAD:github_io_pages
 
       - name: Dispatch trigger for pushing
         uses: peter-evans/repository-dispatch@v1
