@@ -1,14 +1,3 @@
----
-title: MOP - Molecular Process Ontology
-tags: [ontology]
-keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
-last_updated: March 22, 2024
-datatable: true
-summary:
-sidebar: mydoc_sidebar
-permalink: n4cat_ontoworldmap_MOP.html
-folder: combined
----
 ## MOP - Molecular Process Ontology
 
 
@@ -84,4 +73,4 @@ folder: combined
 
 ## Comments
 
-Good conceptual description of reactions. Strongly connected with the RXNO. It contains the underlying molecular processes, for example cyclization, methylation and demethylation.
+Good conceptual description of reactions. Strongly connected with the RXNO. Itf contains the underlying molecular processes, for example cyclization, methylation and demethylation. TEST
