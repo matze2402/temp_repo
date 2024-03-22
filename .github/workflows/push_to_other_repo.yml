@@ -27,3 +27,10 @@ jobs:
           git config pull.rebase false
           git pull --no-edit --strategy-option=theirs origin main  # Konflikte automatisch mit "theirs" Strategie beheben
           git push origin main
+
+      - name: Dispatch trigger for pushing
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.ADMIN }}
+          repository: Matze2402/temp_repo
+          event-type: delete  
