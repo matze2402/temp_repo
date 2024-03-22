@@ -18,7 +18,7 @@ jobs:
 
       - name: Copy folder to target repository
         run: |
-          cp -r combined/* main_repo/alles  
+          cp -r combined/* main_repo/alles
           cd main_repo
           git config --local user.email "action@github.com"
           git config --local user.name "matze2402"
@@ -26,5 +26,5 @@ jobs:
           git add .
           git commit -m "Copy files from source repository"
           git config pull.rebase false
-          git pull origin github_io_pages
-          git push origin main:github_io_pages
+          git pull --no-edit --strategy-option=theirs origin main  # Konflikte automatisch mit "theirs" Strategie beheben
+          git push origin main
