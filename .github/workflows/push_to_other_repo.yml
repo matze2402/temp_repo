@@ -1,9 +1,8 @@
 name: Push Folder to Another Repository
 
 on:
-  push:
-    branches:
-      - main
+ repository_dispatch:
+    types: [push-md]
 
 jobs:
   push-folder:
