@@ -1,14 +1,3 @@
----
-title: CHEMINF - Chemical Information Ontology
-tags: [ontology]
-keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
-last_updated: March 22, 2024
-datatable: true
-summary:
-sidebar: mydoc_sidebar
-permalink: n4cat_ontoworldmap_CHEMINF.html
-folder: combined
----
 ## CHEMINF - Chemical Information Ontology
 
 
@@ -84,4 +73,4 @@ folder: combined
 
 ## Comments
 
-This Ontology has a lot of very specific classes and atributes allowing for a description of atmoic properties (like band gap), however due to the lack of conceptualisation a "bond dissociation Gibbs energetic descriptor" is just three classes away from its basicly central superclass 'chemical descriptor'. (this is a bit to simplified, since neither an enthalpy/entropy nor Gibbs energy is well separated, semantically and topologically differentiated)
+This Ontology has a lot of very specific classes and atributes allowing for a description of atmoic properties (like band gap), however due to the lack of conceptualisation a "bond dissociation Gibbs energetic descriptor" is just three classes away from its basicly central superclass 'chemical descriptor'. (this is a bit to simplified, since neither an enthalpy/entropy nor Gibbs energy is well separated, semantically and topologically differentiated) TEST
