@@ -1,14 +1,3 @@
----
-title: BAO - BioAssay Ontology
-tags: [ontology]
-keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
-last_updated: March 22, 2024
-datatable: true
-summary:
-sidebar: mydoc_sidebar
-permalink: n4cat_ontoworldmap_BAO.html
-folder: combined
----
 ## BAO - BioAssay Ontology
 
 
