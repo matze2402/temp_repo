@@ -18,7 +18,7 @@ jobs:
 
       - name: Copy folder to target repository
         run: |
-          cp -r combined/* main_repo/files
+          cp -r combined/* main_repo/alles
           cd main_repo
           git config --local user.email "action@github.com"
           git config --local user.name "matze2402"
