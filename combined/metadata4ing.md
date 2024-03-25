@@ -1,3 +1,14 @@
+---
+title: metadata4ing - Metadata4Ing: An ontology for describing the generation of research data within a scientific activity.
+tags: [ontology]
+keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
+last_updated: March 25, 2024
+datatable: true
+summary:
+sidebar: mydoc_sidebar
+permalink: n4cat_ontoworldmap_metadata4ing.html
+folder: combined
+---
 ## metadata4ing - Metadata4Ing: An ontology for describing the generation of research data within a scientific activity.
 
 

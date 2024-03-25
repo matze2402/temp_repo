@@ -1,3 +1,14 @@
+---
+title: REX - Physico-chemical process
+tags: [ontology]
+keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
+last_updated: March 25, 2024
+datatable: true
+summary:
+sidebar: mydoc_sidebar
+permalink: n4cat_ontoworldmap_REX.html
+folder: combined
+---
 ## REX - Physico-chemical process
 
 

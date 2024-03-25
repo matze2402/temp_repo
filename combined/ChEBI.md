@@ -1,3 +1,14 @@
+---
+title: ChEBI - Chemical Entities of Biological Interest
+tags: [ontology]
+keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
+last_updated: March 25, 2024
+datatable: true
+summary:
+sidebar: mydoc_sidebar
+permalink: n4cat_ontoworldmap_ChEBI.html
+folder: combined
+---
 ## ChEBI - Chemical Entities of Biological Interest
 
 

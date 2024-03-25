@@ -1,3 +1,14 @@
+---
+title: CIF - Crystallographic Information Framework Ontology
+tags: [ontology]
+keywords: NFDI4Cat, Ontology, Ontology World Map, NFDI for catalysis related research, semantic web
+last_updated: March 25, 2024
+datatable: true
+summary:
+sidebar: mydoc_sidebar
+permalink: n4cat_ontoworldmap_CIF.html
+folder: combined
+---
 ## CIF - Crystallographic Information Framework Ontology
 
 
